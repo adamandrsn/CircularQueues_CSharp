@@ -41,5 +41,26 @@ namespace CircularQueues_CSharp
             }
             queue_array[REAR] = element;
         }
+        public void remove()
+        {
+            if (FRONT == -1)
+            {
+                Console.WriteLine("Queue underflow\n");
+                return;
+            }
+            Console.WriteLine("\nThe element deleted from the queue is: " + queue_array[FRONT] + "\n");
+            if (FRONT == REAR)
+            {
+                FRONT = -1;
+                REAR = -1;
+            }
+            else
+            {
+                if (FRONT == max - 1)
+                    FRONT = 0;
+                else
+                    FRONT = FRONT + 1;
+            }
+        }
     }
 }

@@ -133,7 +133,7 @@ namespace CircularQueues_CSharp
                             break;
                         case '4':
                             return;
-                        default;
+                        default:
                             {
                                 Console.WriteLine("Invalid option!!");
                             }
